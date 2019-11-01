@@ -1,6 +1,6 @@
-require "file_sheppard/version"
-
 module FileSheppard
+  autoload(:Version, 'file_sheppard/version')
+  autoload(:Config, 'file_sheppard/config')
   class Error < StandardError; end
   # Your code goes here...
 end
