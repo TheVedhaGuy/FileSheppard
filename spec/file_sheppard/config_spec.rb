@@ -8,5 +8,13 @@ RSpec.describe FileSheppard::Config do
 
       FileSheppard::Config.read_config
     end
+
+    context "when config file does not exist" do 
+      it "raises SetupRequiredError" do 
+
+
+        expect { FileSheppard::Config.read_config }.to raise_error(FileSheppard::SetupRequiredError)
+      end
+    end
   end
 end
